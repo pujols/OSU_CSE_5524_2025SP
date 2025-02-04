@@ -43,31 +43,27 @@ Submit a .zip file named `name.number.zip` (e.g., `chao.209.zip`) with the follo
 
 In this homework, you will implement a simplified version of the simple version system introduced in Lectures 2 and 3 (textbook, chapter 2). Specifically, your code will output several maps, including the 3D Y and 3D Z maps.
 
-* Specifically, you are given the following gray-scale image (a 2D matrix) captured by parallel projection with a viewing angle of 1/8 x pi. White color means a pixel value of 1; Gray color means a pixel value of 0.5; black color means a pixel value of 0.0.
+* Specifically, you are given the following gray-scale image I (a 2D matrix) captured by parallel projection with a viewing angle of theta = 45 degrees. White color means a pixel value of 1; Gray color means a pixel value of 0.5; black color means a pixel value of 0.0.
 
 ![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/I.png)
 
-* Your goal is to know the 
+* Your goal is to derive the 3D locations of each pixel. Specifically, you are tasked to derive the 3D Y (height) map and 3D Z (depth) map for each pixel.
 
-![Alt text](https://github.com/pujols/OSU_CSE_5523_2024AU/blob/main/HW_1_programming_set/HW_1_programming/for_display/Digits.png)
+![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/3D_Y.png)
 
+![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/3D_Z.png)
 
+As you can see, the Y and Z maps have the same size as the input image I. For each pixel location, the input image I records its color or light intensity, while the Y and Z maps record their height and depth in 3D.
 
 # Question 0: Exercise
 
-* You will use [NumPy] (https://numpy.org/) extensively in this homework. NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays. NumPy has many great functions and operations that will make your implementation much easier. 
+* You will use [NumPy] (https://numpy.org/) extensively in this homework. NumPy is a library for the Python programming language, which adds support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays. NumPy has many great functions and operations that will make your implementation much easier. 
 
 * If you are not familiar with Numpy, we recommend that you read this [tutorial] (https://cs231n.github.io/python-numpy-tutorial/) or some other tutorials online, and then play with some code to get familiar with it.
 
 * We have provided some useful Numpy operations that you may want to use in `numpy_example.py`. You may want to comment out all the lines first and execute them one by one or in a group to see the results and the differences. You can run the command `python3 numpy_example.py`.
 
-* We also provide another Python script `feature_normalization.py`, which will guide you through L2 normalization, covariance matrices, z-score, and whitening. You may find some code here helpful for your implementation in this homework or other homework. You can run the command `python3 feature_normalization.py`.
-
-* In `Regression.py` and `KNN.py`, we also provide some more instructions and hints for what functions or operations you may want to use.
-
-* Caution! python and NumPy's indices start from 0. That is, to get the first element in a vector, the index is 0 rather than 1.
-
-
+* Caution! Python and NumPy's indices start from 0. That is, to get the first element in a vector, the index is 0 rather than 1.
 
 
 
