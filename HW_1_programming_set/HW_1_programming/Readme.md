@@ -43,11 +43,11 @@ Submit a .zip file named `name.number.zip` (e.g., `chao.209.zip`) with the follo
 
 In this homework, you will implement a simplified version of the simple version system introduced in Lectures 2 and 3 (textbook, chapter 2). Specifically, your code will output several maps, including the 3D Y and 3D Z maps.
 
-* Specifically, you are given the following gray-scale image (a 2D matrix) captured by parallel projection. White color means a pixel value of 1; Gray color means a pixel value of 0.5; black color means a pixel value of 0.0.
+* Specifically, you are given the following gray-scale image (a 2D matrix) captured by parallel projection with a viewing angle of 1/8 x pi. White color means a pixel value of 1; Gray color means a pixel value of 0.5; black color means a pixel value of 0.0.
 
 ![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/I.png)
 
-* In Question 2, you will play with the MNIST dataset (digit data).
+* Your goal is to know the 
 
 ![Alt text](https://github.com/pujols/OSU_CSE_5523_2024AU/blob/main/HW_1_programming_set/HW_1_programming/for_display/Digits.png)
 
