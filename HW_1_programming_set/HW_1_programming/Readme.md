@@ -137,7 +137,7 @@ This command will run your code. You will see the resulting `3D_Y` displayed in 
 
 
 
-# Question 5: (50 pts)
+# Question 5: (10 pts)
 
 * Given the input image `I`, `Y`, the camera angle `theta`, and each pixel's 2D vertical location `yy`, you are asked to complete the function `def Z_3D(I, yy, Y, theta)`, which generates the Z (depth) map in 3D.
 
