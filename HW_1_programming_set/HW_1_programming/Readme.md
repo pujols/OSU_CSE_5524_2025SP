@@ -2,28 +2,25 @@
 
 ## Submission instructions
 
-* Due date and time: September 17th (Tuesday) 2024, 23:59 ET
+* Due date and time: February 18th (Monday) 2025, 23:59 ET
 
 * Carmen submission: 
 Submit a .zip file named `name.number.zip` (e.g., `chao.209.zip`) with the following files
-  - your completed Python script `Regression.py` (for regression - Question 1)
-  - your completed Python script `KNN.py` (for KNN - Question 2)
-  - your 8 generated results for Question 1: `linear_1.png`, `quadratic_2.png`, `unknown_5.png`, `unknown_noise_5.png`, `Results_linear_1.npz`, `Results_quadratic_2.npz`, `Results_unknown_5.npz`, and `Results_unknown_noise_5.npz`.
-  - your report in a PDF named `name.number.pdf`.
+  - your completed Python script `main.py`
+  - your 6 generated figures `Map_background.png`, `Map_horizontal_edge.png`, `Map_vertical_edge.png`, `Map_contact_edge.png`, `3D_Y.png`, `3D_Z.png`
+  - your 6 generated files `Results_Map_background.npz`, `Results_Map_horizontal_edge.npz`, `Results_Map_vertical_edge.npz`, `Results_Map_contact_edge.npz`, `Results_3D_Y.npz`, `Results_3D_Z.npz`.
 
-* Collaboration: You may discuss the homework with your classmates. However, you need to write your own solutions, complete your own .py files, and submit them by yourself. In your submission, you need to list with whom you have discussed the homework. Please list each classmate’s name and name.number (e.g., Wei-Lun Chao, chao.209) as a row at the end of `Regression.py` and `KNN.py`. That is, if you discussed your homework with two classmates, your .py file will have two rows. Please consult the syllabus for what is and is not acceptable collaboration.
+* Collaboration: You may discuss the homework with your classmates. However, you need to write your solutions, complete your .py files, and submit them by yourself. In your submission, you need to list with whom you have discussed the homework. Please list each classmate’s name and name.number (e.g., Wei-Lun Chao, chao.209) as a row at the end of `main.py`. That is, if you discussed your homework with two classmates, your .py file will have two rows at the end. Please consult the syllabus for what is and is not acceptable collaboration.
 
 ## Implementation instructions
 
 * Download or clone this repository.
 
-* You will see four Python scripts: `Regression.py`, `KNN.py`, `feature_normalization.py`, and `numpy_example.py`.
-
-* You will see a `data` folder, which contains `mnist_test.csv`, `Linear.npz`, `Quadratic.npz`, `Unknown.npz`, and `Unknown_noise.npz`.
+* You will see two Python scripts: `main.py` and `numpy_example.py`.
 
 * You will see a folder `for_display`, which simply contains some images used for display here.
 
-* Please use python3 and write your own solutions from scratch. (You must use python3.)
+* Please use python3 and write your solutions from scratch. (You must use python3.)
 
 * **Caution! Python and NumPy's indices start from 0. That is, to get the first element in a vector, the index is 0 rather than 1.**
 
@@ -42,17 +39,13 @@ Submit a .zip file named `name.number.zip` (e.g., `chao.209.zip`) with the follo
 
 
 
-
-
 # Introduction
 
-In this homework, you are to implement linear and nonlinear regression and KNN (K-nearest neighbors) for classification and apply your completed algorithms to multiple different datasets to see their pros and cons.
+In this homework, you will implement a simplified version of the simple version system introduced in Lectures 2 and 3 (textbook, chapter 2). Specifically, your code will output several maps, including the 3D Y and 3D Z maps.
 
-* In Question 1, you will play with simple linear and quadratic data (x-axis is the feature variable; y-axis is the real-value label; each point is a data instance: red for training and blue for testing) and some other more complicated data.
+* Specifically, you are given the following gray-scale image (a 2D matrix) captured by parallel projection. White color means a pixel value of 1; Gray color means a pixel value of 0.5; black color means a pixel value of 0.0.
 
-![Alt text](https://github.com/pujols/OSU_CSE_5523_2024AU/blob/main/HW_1_programming_set/HW_1_programming/for_display/linear_1.png)
-
-![Alt text](https://github.com/pujols/OSU_CSE_5523_2024AU/blob/main/HW_1_programming_set/HW_1_programming/for_display/quadratic_2.png)
+![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/I.png)
 
 * In Question 2, you will play with the MNIST dataset (digit data).
 
