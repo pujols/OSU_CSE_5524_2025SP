@@ -95,6 +95,10 @@ This command will run your code. You will see the resulting `Map_background` dis
 
 * The code will generate `Map_background.png` and  `Results_Map_background.npz`, which you will include in your submission.
 
+* Your result should look like:
+
+![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/Map_background.png)
+
 
 
 # Question 2 & 3:  (10 + 20 pts)
@@ -114,6 +118,14 @@ This command will run your code. You will see the resulting `Map_background` dis
 This command will run your code. You will see the resulting `Map_horizontal_edge`, `Map_vertical_edge`, and `Map_contact_edge` displayed in your command line. 
 
 * The code will generate `Map_horizontal_edge.png`, `Map_vertical_edge.png`, `Map_contact_edge.png`, `Results_Map_horizontal_edge.npz`, `Results_Map_vertical_edge.npz`, and `Results_Map_contact_edge.npz`, which you will include in your submission.
+
+* Your result should look like:
+
+![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/Map_horizontal_edge.png)
+
+![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/Map_vertical_edge.png)
+
+![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/Map_contact_edge.png)
 
 
 
