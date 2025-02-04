@@ -75,15 +75,15 @@ As you can see, the Y and Z maps have the same size as the input image I. For ea
 
 * Please overview `main.py`. It contains multiple sub-functions. The outputs are certain maps like edge or background maps, which have the same size as the input image I.
 
-* We note that a matrix and an image have different axis ordering and direction. In Python, for a matrix `I`,  `I[i, j]` means the i-th row (top-down) and j-th column (left-right). In this question, however, **please treat `I` and other maps directly as images. That is, given `I`,  `I[i, j]` means the color at the horizontal location i (left-right) and vertical location j (bottom-up). Namely, the color at the `(i, j)` pixel location.** Please note that i and j both start from 0.
+* We note that a matrix and an image have different axis ordering and direction. In Python, for a matrix `I`,  `I[i, j]` means the i-th row (top-down) and j-th column (left-right). In this question, however, **please treat `I` and other maps directly as images. That is, given `I`,  `I[i, j]` means the color at the horizontal index i (left-right) and vertical index j (bottom-up). Namely, the color at the `(i, j)` pixel location.** Please note that i and j both start from 0.
 
 
 
 # Question 1:  (10 pts)
 
-* Given the input image `I`, we have implemented the edge map  `Map_edge = find_edge(args, I)` and the surface `Map_surface = find_surface(args, I)` for you. A value of 1 means the corresponding pixel location belongs to edges or surfaces, respectively.
+* Given the input image `I`, we have implemented the edge map  `Map_edge = find_edge(args, I)` and the surface `Map_surface = find_surface(args, I)` for you. A value of 1 means the corresponding pixel belongs to edges or surfaces, respectively.
   
-* You are asked to complete the function `def find_background(args, I)`, which generate the background map. Please go to the function and carefully read the input, output, and instructions. You can assume that the actual inputs will follow the input format, and your goal is to generate the output numpy array `Map_background`: a value of 1 means the corresponding pixel location belongs to the backgrounds. Please make sure that your results follow the required numpy array shapes. 
+* You are asked to complete the function `def find_background(args, I)`, which generate the background map. Please go to the function and carefully read the input, output, and instructions. You can assume that the actual inputs will follow the input format, and your goal is to generate the output numpy array `Map_background`: a value of 1 means the corresponding pixel belongs to the backgrounds. Please make sure that your results follow the required numpy array shapes. 
 
 * You may search **`#### Your job 1`** to locate where to amend your implementation. You will see some instructions there. You are free to create more space in between.
 
@@ -105,7 +105,7 @@ This command will run your code. You will see the resulting `Map_background` dis
 
 * Given the input image `I` and the edge map  `Map_edge`, you are asked to complete the function `def find_edge_type(args, I, Map_background, Map_edge, Map_surface)`, which generates the maps for horizontal, vertical, and contact edges.
 
-* Please go to the function and carefully read the input, output, and instructions. You can assume that the actual inputs will follow the input format, and your goal is to generate the three output numpy arrays `Map_horizontal_edge`, `Map_vertical_edge`, and `Map_contact_edge`: a value of 1 means a pixel location belongs to the corresponding type of edges. Please make sure that your results follow the required numpy array shapes. 
+* Please go to the function and carefully read the input, output, and instructions. You can assume that the actual inputs will follow the input format, and your goal is to generate the three output numpy arrays `Map_horizontal_edge`, `Map_vertical_edge`, and `Map_contact_edge`: a value of 1 means a pixel belongs to the corresponding type of edges. Please make sure that your results follow the required numpy array shapes. 
 
 * You may search **`#### Your job 2`** and **`#### Your job 3`** to locate where to amend your implementation. You will see some instructions there. You are free to create more space in between.
 
