@@ -16,6 +16,8 @@ Submit a .zip file named `name.number.zip` (e.g., `chao.209.zip`) with the follo
 
 * Download or clone this repository.
 
+  You will see a PPT and PDF named `HW1`, which provides useful information for the homework assignment.
+
 * You will see two Python scripts: `main.py` and `numpy_example.py`.
 
 * You will see a folder `for_display`, which simply contains some images used for display here.
@@ -55,7 +57,9 @@ In this homework, you will implement a simplified version of the simple version 
 
 As you can see, the Y and Z maps have the same size as the input image I. For each pixel location, the input image I records its color or light intensity, while the Y and Z maps record their height and depth in 3D.
 
-# Question 0: Exercise
+
+
+# Question -1: NumPy Exercise
 
 * You will use [NumPy] (https://numpy.org/) extensively in this homework. NumPy is a library for the Python programming language, which adds support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays. NumPy has many great functions and operations that will make your implementation much easier. 
 
@@ -67,9 +71,17 @@ As you can see, the Y and Z maps have the same size as the input image I. For ea
 
 
 
+# Question 0: Get ready 
+
+* Please overview `main.py`. It contains multiple functions. The outputs are certain maps like edge or background maps, which have the same size as the input image I.
+
+* We note that a matrix and an image have different axis ordering and direction. In Python, for a matrix `I`,  `I[i, j]` means the i-th row (top-down) and j-th column (left-right). In this question, however, **please treat `I` and other maps directly as images. That is, given `I`,  `I[i, j]` means the horizontal location i (left-right) and vertical location j (bottom-up).** Please note that i and j both start from 0.
+
+
+
 # Question 1: Linear and nonlinear regression (30 pts)
 
-* You will implement linear and nonlinear regression (with the RSS loss) in this question. You are to amend your implementation into `Regression.py`.
+* You will You are to amend your implementation into `Regression.py`.
 
 * There are many sub-functions in `Regression.py`. You can ignore all of them but `def linear_regression(X, Y)` and `def main(args)`. In `main(args)`, you will see a general pipeline of machine learning: <br/>
   - Loading data: `X_original, Y_original = data_loader(args)`, in which `X_original` is a 1-by-N matrix (numpy array) and each column is a data instance. You can type `X[:, 0]` to extract the "first" data instance from `X_original`. (Caution! python and numpy's indices start from 0. That is, to get the first element in a vector, the index is 0 rather than 1.) <br/>
