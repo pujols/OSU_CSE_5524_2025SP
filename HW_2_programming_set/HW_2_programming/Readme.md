@@ -71,84 +71,107 @@ The amplitude of the DFT output of the cosine image is as below:
 
 * Please overview `main.py`. It contains multiple sub-functions. Specifically, you may want to take a look at `data_loader`, `load_kernel`, `Convolution`, `Modulation`, `DFT`, and `IDFT`.
 
-* We note that a matrix and an image have different axis ordering and direction. In numPy, for a matrix `I`,  `I[i, j]` means the i-th row (top-down) and j-th column (left-right). In this homework, however, **please treat `I` and other matrices directly as images. That is, given `I`,  `I[i, j, :]` means the R, G, B pixel values at the horizontal index i (left-right) and vertical index j (bottom-up). Namely, the color at the `(i, j)` pixel location.** Please note that i and j both start from 0.
+* We note that a matrix and an image have different axis ordering and direction. In numPy, for a matrix `I`,  `I[i, j]` means the i-th row (top-down) and j-th column (left-right). In this homework, however, **please treat `I` and other matrices directly as images. That is, given `I`,  `I[i, j, :]` means the R, G, and B pixel values at the horizontal index i (left-right) and vertical index j (bottom-up). Namely, the color at the `(i, j)` pixel location.** Please note that i and j both start from 0.
 
 
 
-# Question 1:  (10 pts)
+# Question 1:  (20 pts)
 
-* Go to the `main` function and `find if int(args.current_step) == 1:`
+* Go to the `main` function and find `if int(args.current_step) == 1:`
 
 * Given the input image `I`, you need to perform convolution of it using `kernel`. 
 
-* We have implemented several kernels. Your job is to complete the implementation of the `Convolution` function.
+* We have implemented several kernels in the `load_kernel(args)` function.
+
+* Your job is to complete the implementation of the `Convolution(args, I, kernel)` function. Please go to the function and carefully read the input, output, and instructions. You can assume that the actual inputs will follow the input format, and your goal is to generate the output numpy array `I_out`. Please make sure that your results follow the required numpy array shapes. 
+
+* You may search **`#### Your job 1.0`** and **`#### Your job 1.1`** to locate where to amend your implementation. You will see some instructions there. You are free to create more space in between.
+
+* Caution! For this question, please follow the formula in `HW2.ppt` or `HW2.pdf`.
+
+## Running and saving
+
+* Once completed, please run the following commands<br/>
+`python3 main.py --current_step 1 --data rectangle --kernel average --display --save`<br/>
+`python3 main.py --current_step 1 --data dreese --kernel move_avg --display --save`<br/>
+These commands will run your code. You will see several generated images, and several texts displayed in command lines. 
+
+* The code will generate `1_Convolution_output_rectangle_average.png`, `1_Convolution_output_dreese_move_avg.png`, `1_Results_Convolution_output_dreese_move_avg.npz`, and `1_Results_Convolution_output_rectangle_average.npz`, which you will include in your submission.
+
+
+# Question 2:  (30 pts)
+
+* Go to the `main` function and find `if int(args.current_step) == 2:` and read the corresponding code.
+
+* Given the input image `I`, you need to perform DFT and then IDFT on it.
+
+* We have implemented the `IDFT(args, I_amplitude, I_phase)` function.
+
+* Your job is to complete the implementation of the `DFT(args, I)` function. Please go to the function and carefully read the input, output, and instructions. You can assume that the actual inputs will follow the input format, and your goal is to generate the output numpy arrays `I_out_real` and `I_out_imaginary`, corresponding to the real and imaginary components of the DFT frequency responses. (We have implemented the part for how to convert them into `I_out_amplitude` and `I_out_phase`.) Please make sure that your results follow the required numpy array shapes. 
+
+* You may search **`#### Your job 2`** to locate where to amend your implementation. You will see some instructions there. You are free to create more space in between.
+
+* Caution! For this question, please follow the formula in `HW2.ppt` or `HW2.pdf`.
+
+## Running and saving
+
+* Once completed, please run the following command<br/>
+`python3 main.py --current_step 2 --data cosine --display --save`<br/>
+`python3 main.py --current_step 2 --data dreese --display --save`<br/>
+These commands will run your code. You will see several generated images, and several texts displayed in command lines. 
+
+* The code will generate `2_IDFT_image_dreese.png`, `2_IDFT_image_cosine.png`, `2_DFT_amplitude_dreese.png`, and `2_DFT_amplitude_cosine.png`, `2_Results_DFT_amplitude_dreese.npz`, `2_Results_DFT_amplitude_cosine.npz`, `2_Results_IDFT_image_dreese.npz`, and `2_Results_IDFT_image_cosine.npz`, which you will include in your submission.
+
+
+# Question 3: (0 pts)
+
+* Go to the `main` function and find `if int(args.current_step) == 3:` and read the corresponding code.
+
+* This part of the code is about modulation, and we have implemented the `Modulation(args, I, u_freq, v_freq)` function. Please read through it.
+
+* Your job is to understand how modulation changes an image and verify that modulation in the spatial domain is equivalent to convolution in the frequency domain. Specifically, `I_mod_1` will look very similar to `I_mod_2`.
+
+## Running and saving
+
+* Please run the following command<br/>
+`python3 main.py --current_step 3 --data rectangle --display`<br/>
+This command will run your code. You will see several generated images, and several texts displayed in command lines.
+
+* No files need to be submitted for this question.
+
+
+# Question 4: (0 pts)
+
+* Go to the `main` function and find `if int(args.current_step) == 4:` and read the corresponding code.
+
+* This part of the code is about the relationship between convolution in the spatial domain and multiplication in the frequency domain. Specifically, we implemented the code where the convolutional kernel can inferred from division in the frequency domain.   
+
+* Your job is to understand and verify the relationship. Specifically, `kernel` will look very similar to `kernel_reconstruct`.
   
-* You are asked to complete the function `def find_background(args, I)`, which generate the background map. Please go to the function and carefully read the input, output, and instructions. You can assume that the actual inputs will follow the input format, and your goal is to generate the output numpy array `Map_background`: a value of 1 means the corresponding pixel belongs to the backgrounds. Please make sure that your results follow the required numpy array shapes. 
+## Running and saving
 
-* You may search **`#### Your job 1`** to locate where to amend your implementation. You will see some instructions there. You are free to create more space in between.
+* Please run the following command<br/>
+`python3 main.py --current_step 4 --data rectangle --kernel translate_top_right --display`<br/>
+This command will run your code. You will see several generated images, and several texts displayed in command lines.
+
+* No files need to be submitted for this question.
+
+
+# Question 5: (0 pts)
+
+* Go to the `main` function and find `if int(args.current_step) == 5:` and read the corresponding code.
+
+* This part of the code is about switching the phases between two images.
 
 ## Running and saving
 
-* Once completed, please run the following command<br/>
-`python3 main.py --current_step 1 --display --save`<br/>
-This command will run your code. You will see the resulting `Map_background` displayed in your command line. 
+* Please run the following command<br/>
+`python3 main.py --current_step 5 --data dreese --display`<br/>
+This command will run your code. You will see several generated images, and several texts displayed in command lines.
 
-* The code will generate `Map_background.png` and  `Results_Map_background.npz`, which you will include in your submission.
-
-* Your result should look like:
-
-![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/Map_background.png)
-
-
-
-# Question 2 & 3:  (10 + 20 pts)
-
-* Given the input image `I` and the edge map  `Map_edge`, you are asked to complete the function `def find_edge_type(args, I, Map_background, Map_edge, Map_surface)`, which generates the maps for horizontal, vertical, and contact edges.
-
-* Please go to the function and carefully read the input, output, and instructions. You can assume that the actual inputs will follow the input format, and your goal is to generate the three output numpy arrays `Map_horizontal_edge`, `Map_vertical_edge`, and `Map_contact_edge`: a value of 1 means a pixel belongs to the corresponding type of edges. Please make sure that your results follow the required numpy array shapes. 
-
-* You may search **`#### Your job 2`** and **`#### Your job 3`** to locate where to amend your implementation. You will see some instructions there. You are free to create more space in between.
-
-* **Hint:** Since we already provided `Map_edge`, which locates all the pixels belonging to edges, `Map_horizontal_edge[i, j]`, `Map_vertical_edge[i, j]`, and `Map_contact_edge[i, j]` can be 1 only when `Map_edge[i, j]` is 1.
-
-## Running and saving
-
-* Once completed, please run the following command<br/>
-`python3 main.py --current_step 3 --display --save`<br/>
-This command will run your code. You will see the resulting `Map_horizontal_edge`, `Map_vertical_edge`, and `Map_contact_edge` displayed in your command line. 
-
-* The code will generate `Map_horizontal_edge.png`, `Map_vertical_edge.png`, `Map_contact_edge.png`, `Results_Map_horizontal_edge.npz`, `Results_Map_vertical_edge.npz`, and `Results_Map_contact_edge.npz`, which you will include in your submission.
-
-* Your result should look like:
-
-![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/Map_horizontal_edge.png)
-
-![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/Map_vertical_edge.png)
-
-![Alt text](https://github.com/pujols/OSU_CSE_5524_2025SP/blob/main/HW_1_programming_set/HW_1_programming/for_display/Map_contact_edge.png)
-
-
-
-# Question 4: (50 pts)
-
-* Given the input image `I`, the background map `Map_background`, surface map `Map_surface`, edge maps for different types `Map_horizontal_edge`, `Map_vertical_edge`, `Map_contact_edge`, and the camera angle `theta`, you are asked to complete the function `def Y_3D(I, Map_background, Map_horizontal_edge, Map_vertical_edge, Map_contact_edge, Map_surface, theta)`, which generates the Y (height) map in 3D.
-
-* Please go to the function and carefully read the input, output, and instructions. You can assume that the actual inputs will follow the input format, and your goal is to generate the output numpy array `Y`. Please make sure that your results follow the required numpy array shapes. 
-
-* You may search **`#### Your job 4`** to locate where to amend your implementation. You will see some instructions there. You are free to create more space in between.
-
-* **Hint:** You need to create a matrix `A` and a vector `b` to apply the linear algebra formula to obtain the answer. 
-
-## Running and saving
-
-* Once completed, please run the following command<br/>
-`python3 main.py --current_step 4 --display --save`<br/>
-This command will run your code. You will see the resulting `3D_Y` displayed in your command line. 
-
-* The code will generate `3D_Y.png` and `Results_3D_Y.npz`, which you will include in your submission.
-
-
-
+* No files need to be submitted for this question.
+  
+  
 # Question 5: (10 pts)
 
 * Given the input image `I`, `Y`, the camera angle `theta`, and each pixel's 2D vertical location `yy`, you are asked to complete the function `def Z_3D(I, yy, Y, theta)`, which generates the Z (depth) map in 3D.
