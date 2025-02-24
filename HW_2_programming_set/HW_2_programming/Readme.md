@@ -186,14 +186,14 @@ This command will run your code. You will see several generated images, and seve
 ## Running, improving, and saving
 
 * Once completed, please run the following command<br/>
-`python3 main.py --current_step 6 --data dreese -kernel average --display --save`<br/>
-`python3 main.py --current_step 6 --data dreese -kernel binomial --display --save`<br/>
+`python3 main.py --current_step 6 --data dreese --kernel average --display --save`<br/>
+`python3 main.py --current_step 6 --data dreese --kernel binomial --display --save`<br/>
 These commands will run your code. You will see several generated images, and several texts displayed in command lines. 
 
 * You will see that while these filters remove noise, they also make the image overly blurred. Please develop a filter that can preserve the image content better. Please search **`#### Your job 3.3`** to locate where to amend your implementation. You will see some instructions there. You are free to create more space in between.
 
 * Once completed, please run the following command<br/>
-`python3 main.py --current_step 6 --data dreese -kernel your_denoising_kernel --display --save`<br/>
+`python3 main.py --current_step 6 --data dreese --kernel your_denoising_kernel --display --save`<br/>
 These commands will run your code. You will see several generated images, and several texts displayed in command lines. 
 
 * The code will generate `6_Kernel_binomial.png`, `6_Kernel_your_denoising_kernel.png`, `6_Results_Kernel_binomial.npz`, `6_Results_Kernel_your_denoising_kernel.npz`, `6_Convolution_output_dreese_binomial.png`, and `6_Convolution_output_dreese_your_denoising_kernel.png`, which you will include in your submission.
@@ -214,7 +214,7 @@ These commands will run your code. You will see several generated images, and se
 ## Running, improving, and saving
 
 * Once completed, please run the following command<br/>
-`python3 main.py --current_step 7 --data dreese -kernel Laplacian --display --save`<br/>
+`python3 main.py --current_step 7 --data dreese --kernel Laplacian --display --save`<br/>
 This command will run your code. You will see several generated images, and several texts displayed in command lines. 
 
 * The code will generate `7_Convolution_output_dreese_Laplacian.png`, `7_Kernel_Laplacian.png`, `7_Results_Convolution_output_dreese_Laplacian.npz`, and `7_Results_Kernel_Laplacian.npz`, which you will include in your submission.
