@@ -33,7 +33,7 @@ Submit a .zip file named `name.number.zip` (e.g., `chao.209.zip`) with the follo
 
 * We note that the provided commands are designed to work with Mac/Linux with Python version 3. If you use Windows (like me!), we recommend that you run the code in the Windows command line (CMD). You may use `py -3` instead of `python3` to run the code. You may use editors like PyCharm to write your code.
 
-* **Caution! Please do not import packages (like scikit learn) that are not listed in the provided code. In this homework, you are not allowed to use numPy or other Python libraries' built-in convolution, DFT, IDFT, and filter functions. If you use them, you will get 0 points for the entire homework.** 
+* **Caution! Please do not import packages (like scikit learn) that are not listed in the provided code. In this homework, you are not allowed to use numPy's or other Python libraries' built-in convolution, DFT, IDFT, and filter functions. If you use them, you will get 0 points for the entire homework.** 
 
 * Caution! Follow the instructions in each question strictly to code up your solutions. Do not change the output format. Do not modify the code unless we instruct you to do so. (You are free to play with the code but your submitted code should not contain those changes that we do not ask you to do.) A homework solution that does not match the provided setup, such as format, name, initializations, etc., will not be graded. It is your responsibility to make sure that your code runs with the provided commands and scripts.
 
@@ -240,7 +240,7 @@ This command will run your code. You will see several generated images, and seve
 
 * The code will generate `8_Recovered_image_none.png` and `8_Results_Recovered_image_none.npz`, which you will include in your submission.
   
-* Please describe how you design your solution in the pdf.
+* Please describe how you design your solution (and why) in the pdf. We want to learn about your design process!
 
 
 # What to submit:
