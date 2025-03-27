@@ -130,7 +130,7 @@ There are six images, and each of them will create two files; then, you need to 
 python main.py --job_number 1 --image_folder data/images --annotation_file data/coco.json --display --save
 ```
 
-## Question 2: Decode Ground Truth Tensors (10 points)
+## Question 2: Decode Ground Truth or Predicted Tensors (10 points)
 
 ### Objective:
 Convert the existence and location tensors back into bounding box proposals for visualization and evaluation.
