@@ -46,7 +46,7 @@ Your `.zip` file **must contain** the following:
   - Font size **no smaller than 12**
 
 > 🚨 **IMPORTANT:**  
-> All jobs should run in **reasonable time** — ideally **less than 5 minutes per job**.  
+> All jobs should run in **reasonable time** — ideally **less than 5 minutes per job**.
 > Missing **any** of the required files (`main.py`, outputs in `result/`, or `report.pdf`) will result in a **grade penalty**.  
 > You need to save images for the **task 2, 4 and 5 by yourself** in the result folder and submit it. Create a folder per task in the result and put images for each task in it.  
 > There is a unit test file, `test_rpn_utils.py,` which you can run to determine if your code is correct. The unit test is not complete, so there is a chance by passing all the tests, you still have some problems, but it is helpful. Read more about it at the end of this document.
@@ -89,11 +89,16 @@ You can install the dependencies using pip:
 pip install numpy pillow matplotlib
 ```
 
+You are NOT allowed to use other Python libraries beyond those we imported. You need to implement the IoU and NMS functions by yourself.  
 
 
 ---
+## Detailed Introduction
 
-## Question 1: Naïve Ground Truth Tensor Generation (40 points)
+Please find it in `HW3.ppt` or `HW3.pdf`
+
+
+## Question 1: Naïve Ground Truth Tensor Generation (30 points)
 
 ### Objective:
 Generate patch-level ground truth tensors from annotated images to simulate the output of a simple RPN.
@@ -303,7 +308,9 @@ python main.py --job_number 5 --image_folder data/images --annotation_file data/
 ![Expected Output](data/task5/pandas.png)
 ![Expected Output](data/task5/tiger.png)
 
+## Question 6: Written Part (10 points)
 
+Please find them at the end of the `HW3.pdf` or `HW3.ppt`
 
 
 # 🧪 Unit Tests for Region Proposal Network (RPN) Modules
