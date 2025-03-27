@@ -13,7 +13,6 @@ Each job corresponds to a specific step in the pipeline.
 - 🧹 Non-Maximum Suppression (NMS)
 
 
-
 ## 📁 Project Structure
 
 ```bash
@@ -34,7 +33,7 @@ Each job corresponds to a specific step in the pipeline.
 ## 📤 Submission Instructions
 
 
-Submit a `.zip` file named:
+Submit a `.zip` file named: name.number.zip
 
 
 Your `.zip` file **must contain** the following:
