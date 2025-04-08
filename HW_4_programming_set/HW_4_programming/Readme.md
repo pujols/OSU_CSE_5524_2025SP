@@ -97,6 +97,8 @@ These commands will run your code. You will see several generated images, and se
 
 * The code will generate `Downsampled_lighthouse_scale_0.npz`, `Downsampled_lighthouse_scale_1.npz`, `Downsampled_lighthouse_scale_2.npz`, `Downsampled_lighthouse_scale_3.npz`, and `Downsampled_lighthouse.png`, which you will include in your submission.
 
+* **Running the code should only take several seconds. If it runs more than 20 seconds, you will get a 30% reduction for Questions 1 and 2.** 
+
 
 
 # Question 3: Upsampling (20 pts)
@@ -131,6 +133,8 @@ These commands will run your code. You will see several generated images, and se
 
 * The code will generate `Residual_lighthouse_scale_0.npz`, `Residual_lighthouse_scale_1.npz`, `Residual_lighthouse_scale_2.npz`, and `Residual_lighthouse.png`, which you will include in your submission.
 
+* **Running the code should only take several seconds. If it runs more than 40 seconds, you will get a 30% reduction for Questions 3 and 4.** 
+
 
 
 # Question 5: Image reconstruction (20 pts)
@@ -153,7 +157,9 @@ These commands will run your code. You will see several generated images, and se
 
 * The code will generate `Reconstruct_lighthouse.npz` and `Reconstruct_lighthouse.png`, which you will include in your submission.
   
+* **Running the code should only take several seconds. If it runs more than 60 seconds, you will get a 30% reduction for Questions 5.**
 
+  
 
 # What to submit:
 
