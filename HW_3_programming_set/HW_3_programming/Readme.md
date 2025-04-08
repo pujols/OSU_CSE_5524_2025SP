@@ -42,7 +42,7 @@ Your `.zip` file **must contain** the following:
 - ✅ `result/` folder — all generated output files:
   - `.png` files (visualizations and figures)
   - `.npz` files (tensors and intermediate data)
-- ✅ `report.pdf` — a **single-page** PDF describing your solutions 
+- ✅ `report.pdf` — a **single-page** PDF describing your solutions (for Question 6 only)
   - Font size **no smaller than 12**
 
 > 🚨 **IMPORTANT:**  
