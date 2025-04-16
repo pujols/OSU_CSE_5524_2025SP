@@ -105,7 +105,7 @@ Generate patch-level ground truth tensors from annotated images to simulate the 
 
 ### Setup:
 - Resize input images to 200x200.
-- Divide each resized image into a 20×20 grid of 5×5 patches.
+- Divide each resized image into a 20×20 grid of 10×10 patches.
 
 ### What to read:
 - Please see `main` after `args.job_number == 1:`, `resize_image_and_boxes`, `compute_patch_grid`, `boxes_overlap` and `generate_gt_tensors` functions.
@@ -189,7 +189,7 @@ Implement anchor-based encoding by labeling each patch location and anchor shape
 ### Tasks:
 1. For each image:
    - Resize image and GT boxes to 200x200.
-   - Compute the patch grid (20x20 patches of size 5x5).
+   - Compute the patch grid (20x20 patches of size 10x10).
 2. For each anchor shape and each patch:
    - Place an anchor box at the patch center.
    - Compute IoU between the anchor and all GT boxes.
